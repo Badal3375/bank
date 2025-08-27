@@ -66,7 +66,7 @@ Run the application:
 
 bash
 python app.py
-Visit the app at: http://localhost:5000
+Visit the app at:(http://192.168.29.125:3000/Bank.html)
 
 ▶️ Steps to Run (Example for Node.js + Express)
 Navigate to backend folder:
@@ -83,7 +83,7 @@ Run the server:
 
 bash
 npm start
-Open browser at: http://localhost:3000
+Open browser at: http://192.168.29.125:3000/Bank.html
 
 🎯 Usage
 Employees: Log in to manage customer records, transactions, and loans.

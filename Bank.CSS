@@ -1,0 +1,146 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7f8;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+div {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+/* Headings */
+h2, h3 {
+  margin-bottom: 15px;
+  color: #0077cc;
+}
+
+/* Input fields */
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  background: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  font-size: 1em;
+  border-radius: 5px;
+  margin-right: 10px;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #005fa3;
+}
+
+  body {
+      /* Sets the background image */
+      background-image: url('Image/miquel-parera-41J9-JTIP-c-unsplash.jpg'); 
+
+      /* Ensures the image covers the entire background */
+      background-size: cover; 
+
+      /* Centers the image */
+      background-position: center; 
+
+      /* Prevents the image from repeating */
+      background-repeat: no-repeat; 
+
+      /* Fixes the background image during scroll */
+      background-attachment: fixed; 
+    }
+    
+    .bank-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+/* Transaction list */
+ul#transaction-list {
+  list-style-type: none;
+  max-height: 200px;
+  overflow-y: auto;
+  padding-left: 0;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+ul#transaction-list li {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eaeaea;
+  font-size: 0.9em;
+}
+
+ul#transaction-list li:last-child {
+  border-bottom: none;
+}
+
+/* Special styling for links inside paragraphs */
+p button {
+  background: transparent;
+  color: #0077cc;
+  padding: 0;
+  margin: 0;
+  font-size: 0.9em;
+  border-bottom: 1px dashed #0077cc;
+}
+
+p button:hover {
+  background: transparent;
+  color: #005fa3;
+  border-bottom: 1px solid #005fa3;
+}
+
+/* Canvas responsiveness inside graphs section */
+#graphs-section canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px;
+}
+
+/* Show only one main section at a time */
+#login-section,
+#register-section,
+#dashboard,
+#graphs-section {
+  display: none;
+}

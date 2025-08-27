@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bank Management System</title>
+  <link rel="stylesheet" href="Bank.CSS" />
+  <style>
+    .bank-image {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+
+  <!-- Chart.js CDN for rendering charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+  <div id="app">
+
+    <!-- Bank Image -->
+    <img src="Image/bankmanagementsystem-230205085234-1196de84-thumbnail.webp" alt="Bank Image" class="bank-image" />
+
+    <!-- Login Form -->
+    <section id="login-section">
+      <h2>Login</h2>
+      <input type="text" id="login-username" placeholder="Username" />
+      <input type="password" id="login-password" placeholder="Password" />
+      <button onclick="login()">Login</button>
+      <p>Don't have an account? <button onclick="showRegister()">Register</button></p>
+    </section>
+
+    <!-- Register Form -->
+    <section id="register-section" style="display:none;">
+      <h2>Register</h2>
+      <input type="text" id="register-username" placeholder="Username" />
+      <input type="password" id="register-password" placeholder="Password" />
+      <button onclick="register()">Register</button>
+      <p>Already have an account? <button onclick="showLogin()">Login</button></p>
+    </section>
+
+    <!-- Account Dashboard -->
+    <section id="dashboard" style="display:none;">
+      <h2>Welcome, <span id="user-name"></span></h2>
+      <p>Balance: $<span id="balance">0</span></p>
+      <input type="number" id="amount" placeholder="Enter amount" />
+      <button onclick="deposit()">Deposit</button>
+      <button onclick="withdraw()">Withdraw</button>
+      <button onclick="logout()">Logout</button>
+
+      <h3>Transaction History</h3>
+      <ul id="transaction-list"></ul>
+
+      <!-- Show Graphs Button -->
+      <button id="show-graphs-btn" onclick="toggleGraphs(true)">Show Transaction Graphs & Rank</button>
+
+      <!-- Graph Section -->
+      <div id="graphs-section" style="display:none; margin-top: 20px;">
+        <canvas id="transactions-bar" width="400" height="200"></canvas>
+        <p>Your Rank by Balance: <span id="user-rank">Loading...</span></p>
+        <button onclick="toggleGraphs(false)">Close Graphs</button>
+      </div>
+    </section>
+  </div>
+
+  <!-- Your Bank.js script -->
+  <script src="Bank.js"></script>
+</body>
+</html>
